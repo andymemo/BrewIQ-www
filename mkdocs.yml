@@ -6,6 +6,8 @@ site_dir: site-build
 
 theme:
   name: material
+  icon:
+    logo: material/glass-mug-variant
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -22,7 +24,7 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
   font:
-    text: Helvetica
+    text: Inter
   features:
     - navigation.instant
     - navigation.tracking
