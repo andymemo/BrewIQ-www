@@ -4,6 +4,8 @@ Inventory is your **ingredient catalogue** — the specs and pricing for grains,
 
 The page has tabs for **Grains**, **Hops**, **Fermentables**, **Adjuncts**, and **Yeasts**, plus a **Misc** tab if you have packaging-cost permissions (covered at the bottom — it's unrelated to recipe ingredients).
 
+![The Grains tab of Inventory showing name, type, colour, extract, origin and supplier](images/inventory-grains.png)
+
 Every ingredient you see is either part of the **shared catalogue** (managed by your provider) or a **custom** item you've added yourself. If you only have read access, you can browse the catalogue but not add to it.
 
 ## Fields per category

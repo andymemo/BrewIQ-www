@@ -11,6 +11,8 @@ Two important framing points before you connect anything:
 
 ### Device API Key (for Tilt / iSpindel / RAPT Pill)
 
+![The Devices Integration tab showing the Device API Key panel and Grainfather MQTT Account panel](images/devices-integration.png)
+
 Click **Generate Key** to create your device API key. This gives you a set of copyable **Device URLs**, one per device type:
 
 ```
@@ -45,6 +47,8 @@ There are also two collapsible **debug panels** on this tab — a **Live Ingesti
 
 ## Fermentation tab
 
+![The Fermentation tab showing device cards for a RAPT Pill and several Tilts](images/devices-fermentation.png)
+
 Every gravity/temperature sensor (Tilt, iSpindel, RAPT Pill) shows up here as a card once it's reported at least one reading. Each card shows:
 
 - Name — Tilt devices also show a colour swatch matching the physical Tilt's colour
@@ -75,6 +79,8 @@ There's no auto-discovery here — you have to register the serial manually.
 
 ### Monitoring and control
 
+![Two Temp Control device cards, one online and cooling, one offline in manual mode](images/devices-temp-control.png)
+
 Each Temp Control card shows current temp, target temp, a linked gravity reading (if you've paired one), and a status icon for heating/cooling/paused/idle. Click **View & control** to open the full device detail view, where you can:
 
 - Click the target temperature to open **Set Target Temperature** and change it
@@ -86,6 +92,8 @@ Each Temp Control card shows current temp, target temp, a linked gravity reading
 - View a **Temperature & gravity history** chart (logged roughly every 15–30 minutes)
 
 If a Grainfather-app brew session is actively controlling the device, BrewIQ shows controls as read-only until that session ends. If you've manually overridden the schedule, a **Resume schedule** button clears the override.
+
+![The Grainfather device detail view showing current temperature, device settings and a temperature history chart](images/devices-temp-control-detail.png)
 
 ### Fermentation schedule
 

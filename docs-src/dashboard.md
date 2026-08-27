@@ -2,6 +2,8 @@
 
 The Dashboard is the first screen you land on after signing in. It's a quick-glance summary — not the full list — of what's active right now, with links out to the complete views.
 
+![The BrewIQ dashboard in table view, showing Brew Sessions and My Recipes](images/dashboard-list-view.png)
+
 It's built from two sections. Which ones you see depends on your permissions (a brewery admin can restrict what roles can view).
 
 ## Brew Sessions

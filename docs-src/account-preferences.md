@@ -11,6 +11,8 @@ Open **Preferences** from the nav to manage your units, brewing defaults, accoun
 
 ## Brewing Preferences
 
+![The Brewing Preferences tab showing default mash thickness, batch size and absorption values](images/preferences-brewing.png)
+
 Defaults that pre-fill into new recipes and calculations, in your chosen units:
 
 - Default Mash Thickness

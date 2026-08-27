@@ -1,5 +1,7 @@
 # Brew Sessions
 
+![The Brew Sessions list showing recipe, batch number, brew date and status](images/brew-sessions-list.png)
+
 A brew session is a record of one actual batch — brewed from a recipe, tracked through fermentation, and closed out at packaging. There's no "New Brew Session" button on the sessions list itself; every session starts from a recipe's **Brew it!** action (recipe builder, the recipes list, or a recipe's print preview).
 
 ## Starting a session
@@ -28,6 +30,8 @@ Batch Number and Brew Date are editable here (Brew Date locks once fermentation 
 
 ## Logs tab — Brew Day Logs
 
+![The Brew Day Logs tab showing Mash Complete, Pre-Boil, Post-Boil and Fermenter entries](images/brew-log.png)
+
 Records what happened on brew day itself. Each log has a **Log Type** — **Mash Complete, Pre-Boil, Post-Boil, Fermenter** (each loggable once per session), or **Sample** (loggable any number of times) — plus **Wort Volume**, **Wort Gravity**, optional **pH**, and a comment.
 
 Once you've logged a Pre-Boil reading, BrewIQ calculates your actual **Brewhouse Efficiency** for the batch and shows it next to the recipe's expected efficiency, so you can see immediately how the brew day tracked against plan.
@@ -42,6 +46,8 @@ A read-only snapshot of the recipe as brewed — grain bill, hop schedule (with 
 
 This is where day-to-day tracking happens, combining manual entries with any linked devices.
 
+![The Fermentation Tracking gauges, status stepper, and Fermentation Steps schedule](images/fermentation-tracking.png)
+
 **Fermentation Tracking** header — shows four gauges: **Specific Gravity** (with target FG), **ABV (calculated)**, **Fermenter Temp** (flags whether you're in, below, or above the ideal range), and **Attenuation**. If you've linked a gravity-tracking device or temp controller, its data feeds these gauges automatically — whichever source (manual or device) is more recent wins.
 
 **Add Reading** — log Date & Time, Gravity, Temp, pH, and Vessel (Primary/Secondary) by hand at any point.
@@ -49,6 +55,8 @@ This is where day-to-day tracking happens, combining manual entries with any lin
 **Readings table** shows every reading with its source (Manual, or the device it came from). You can select and bulk-delete readings.
 
 **Fermentation chart** — plots gravity, temperature (per source if you have more than one), pH, session target temp, and attenuation velocity over time. Needs at least two readings to appear, and you can drag to zoom.
+
+![The fermentation chart plotting gravity, temperature and attenuation velocity over time](images/fermentation-chart.png)
 
 Everything on this tab locks once the session is Packaged, but stays visible.
 
@@ -63,6 +71,8 @@ Each step can also **auto-advance**: set a condition based on average attenuatio
 Once the session reaches Conditioning, the step list becomes read-only and is replaced by a single flat **Conditioning Temp** field.
 
 ## Packaging tab
+
+![The Packaging tab showing Volume Packaged, Batch Costs, and Packaged Items](images/packaging.png)
 
 Available once a session is marked Packaged. This tab tracks **costs and package counts**, not fermentation results — final ABV/attenuation are read from the Fermentation gauges and Overview, not re-entered here.
 

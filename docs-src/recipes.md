@@ -2,6 +2,8 @@
 
 ## The Recipes list
 
+![The Recipes list with the smart folders, collections, labels and tags rail on the left](images/recipe-list.png)
+
 Switch between **Card view** and **Table view** with the toggle in the top-right. The table view shows OG, FG, ABV, IBU, SRM, batch volume, created date, and a **Brew Sessions** count you can click to jump straight to the sessions brewed from that recipe.
 
 Search matches recipe name, notes, and any ingredient name — try `Search recipes, ingredients, notes...` for things like "citra" to find every recipe using a particular hop.
@@ -37,6 +39,8 @@ Turn on **Auto-calc Pre/Post-Boil** and BrewIQ will keep those two volumes in sy
 
 ### The stat strip
 
+![The recipe builder header showing the stat strip with a BJCP style's target ranges](images/recipe-details-stat-strip.png)
+
 Right under the details, a live strip shows **OG, FG, ABV, IBU, SRM, Mash pH, and Cost**, recalculating as you edit. Once you've picked a BJCP style, each cell also shows that style's target range underneath and highlights green when you're inside it — a quick way to see if your recipe is on-style.
 
 Treat **Mash pH** and **Cost** as directional estimates rather than lab-precision numbers — mash pH is a rule-of-thumb calculation, not a substitute for an actual meter reading.
@@ -65,6 +69,8 @@ There's no version history — Save simply overwrites the recipe. If you want to
 Click **Brew it!** (in the builder header, the list row actions, or the print preview) to start a new [brew session](brew-sessions.md) from that recipe.
 
 ### Print Preview
+
+![The Print Preview dialog showing a recipe's full details and grain bill](images/recipe-print-preview.png)
 
 **Print** opens a clean, printable one-page view of the recipe — details, stat strip, and every ingredient section — with **Edit**, **Brew it!**, **Share**, and a link to any linked brew sessions right in the dialog header.
 

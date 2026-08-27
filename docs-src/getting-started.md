@@ -15,6 +15,8 @@ If your invite link has expired, ask your admin to resend it from the Users tab.
 
 ## Signing in
 
+![The BrewIQ sign-in screen with Email and Password fields](images/sign-in.png)
+
 Go to the login page and enter your **Email** and **Password**, then **Sign in**. There's no "remember me" option — sessions time out after a period of inactivity set by your admin.
 
 If your account has two-factor authentication enabled, you'll be prompted for a second step after your password: a 6-digit code from your authenticator app, or **Use a backup code instead** if you don't have your app handy.
@@ -27,6 +29,8 @@ MFA is optional by default, but some roles require it — if yours does, you'll 
 
 **Setting it up:**
 
+![The MFA setup screen showing a QR code to scan with an authenticator app](images/mfa-setup.png)
+
 1. Scan the QR code with an authenticator app (Google Authenticator, Microsoft Authenticator, or similar). Can't scan? There's a manual entry code shown alongside it.
 2. Enter the 6-digit code your app is now showing, and click **Activate**.
 3. You'll be shown a set of **backup codes** — save these somewhere safe. Each one can be used once to sign in if you lose access to your authenticator app, and they're only shown this one time.
@@ -34,6 +38,8 @@ MFA is optional by default, but some roles require it — if yours does, you'll 
 You can manage MFA any time from [Account & Preferences](account-preferences.md) — enable it if it's optional, **Reregister MFA** if you're moving to a new device, or **Disable MFA** (both require your password and a current code to confirm).
 
 ## Forgotten password
+
+![The Reset your password screen asking for an account email](images/password-reset.png)
 
 Click **Forgot password?** and enter your email. What happens next depends on whether MFA is already set up on your account:
 
