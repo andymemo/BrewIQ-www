@@ -1,0 +1,60 @@
+site_name: BrewIQ Docs
+site_url: https://brewiq.beer/docs/
+site_description: End-user reference documentation for the BrewIQ brewing platform.
+docs_dir: docs-src
+site_dir: site-build
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Helvetica
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+
+extra_css:
+  - assets/extra.css
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Dashboard: dashboard.md
+  - Recipes: recipes.md
+  - Brew Sessions: brew-sessions.md
+  - Inventory: inventory.md
+  - Devices: devices.md
+  - Account & Preferences: account-preferences.md
+  - Tenant Administration: tenant-administration.md
+  - FAQ: faq.md
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+repo_url: https://github.com/andymemo/BrewIQ-www
+repo_name: BrewIQ-www
+edit_uri: edit/main/docs-src/
