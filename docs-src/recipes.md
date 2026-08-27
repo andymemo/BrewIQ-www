@@ -78,10 +78,16 @@ Click **Brew it!** (in the builder header, the list row actions, or the print pr
 
 ## Sharing a recipe
 
-Click **Share** (in the builder, the print preview, or a recipe's row) to open **Share Recipe**. Choose a duration (hours or days, up to 60 days) or check **Share Permanently**, then **Create Share Link**. You get:
+Click **Share** (in the builder, the print preview, or a recipe's row) to open **Share Recipe**. Choose a duration (hours or days, up to 60 days) or check **Share Permanently**, then **Create Share Link**.
+
+![The Share Recipe dialog with a duration field and Create Share Link button](images/recipe-share-create.png){ width="420" }
+
+You get:
 
 - A public link (`.../share/{token}`) with a **Copy Link** button
 - A QR code — click it to copy the image to your clipboard (it downloads as a PNG instead if your browser/connection doesn't support clipboard images)
+
+![The Share Recipe dialog after creation, showing the public link and QR code](images/recipe-share-link.png){ width="420" }
 
 A recipe only has **one active share link at a time** — creating a new one replaces the old, and **Stop Sharing** revokes it immediately. Anyone with the link can view a read-only version of the recipe with no login required — cost and pricing information is left out of the public view.
 

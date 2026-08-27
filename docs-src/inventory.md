@@ -20,6 +20,8 @@ Every ingredient you see is either part of the **shared catalogue** (managed by 
 
 Click **Add custom grain / hop / fermentable / adjunct / yeast** at the top of the relevant tab. Start typing the name — if something close already exists in the shared catalogue, BrewIQ shows you matches with a **Clone & customize** button, so you can start from an existing item instead of from scratch. If nothing matches (or you'd rather not use a match), click **Create from scratch** to open a blank form and fill in the fields above.
 
+![The Add custom grain dialog showing similar catalogue matches with Clone & customize buttons](images/inventory-add-custom.png){ width="420" }
+
 Custom items you own get full **Edit**/**Delete** icons. Shared catalogue items you don't own only offer a **Clone** icon — cloning makes an editable tenant-owned copy immediately, no confirmation step.
 
 Click any ingredient's name to open a read-only details view without editing it.
