@@ -34,3 +34,11 @@
 .md-typeset code {
   border-radius: 4px;
 }
+
+.md-typeset img {
+  display: block;
+  margin: 1em auto;
+  border-radius: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest, rgba(0, 0, 0, 0.1));
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
