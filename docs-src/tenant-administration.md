@@ -31,6 +31,8 @@ Sign-ins from a trusted IP or subnet skip the MFA requirement. Add a CIDR range 
 
 ## Recipe Labels
 
+![The Recipe Labels tab showing editable names for the 5 colour-coded labels](images/admin-recipe-labels.png)
+
 Rename the 5 fixed colour-coded recipe labels (Proven, Ready to brew, Needs work, Seasonal, Retired, by default) to whatever fits your workflow. Existing recipes keep their label assignment — only the display name changes.
 
 ## Global settings

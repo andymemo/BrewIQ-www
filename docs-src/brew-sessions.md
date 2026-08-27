@@ -6,6 +6,8 @@ A brew session is a record of one actual batch — brewed from a recipe, tracked
 
 ## Starting a session
 
+![The New Brew Session setup screen with Batch Number, Brew Date, and the snapshot checkbox](images/brew-session-setup.png)
+
 **Brew it!** takes you to a short setup screen — deliberately minimal, no batch scaling or equipment selection here:
 
 - **Batch Number** — auto-suggested based on the brew date, editable
@@ -67,6 +69,8 @@ This is a step-by-step temperature schedule you build for the batch: name, durat
 Turn on **Managed Mode** and BrewIQ pushes each step's target temperature (and heating/cooling mode) to a paired temp controller automatically as the schedule advances — no manual adjustment needed on the controller itself.
 
 Each step can also **auto-advance**: set a condition based on average attenuation velocity dropping below a threshold, average gravity dropping below a threshold, or both, evaluated over a configurable time window, and BrewIQ moves to the next step on its own once the condition is met. You can also **Skip** the active step forward manually, or **Rewind** back to the previous one.
+
+![The Add Fermentation Step dialog showing duration, temperature, and auto-advance conditions](images/fermentation-step-dialog.png){ width="420" }
 
 Once the session reaches Conditioning, the step list becomes read-only and is replaced by a single flat **Conditioning Temp** field.
 

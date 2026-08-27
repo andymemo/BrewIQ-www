@@ -34,6 +34,8 @@ Defaults that pre-fill into new recipes and calculations, in your chosen units:
 
 ## Notifications
 
+![The Notifications tab showing toggles for fermentation devices, temp controllers, and fermentation alerts](images/preferences-notifications.png)
+
 Only visible if your role has notification permissions. Turning on a category here reveals a bell icon in the corresponding place in the app — you still have to click that bell on the specific device or session you want to be alerted about:
 
 - **Fermentation Devices** — device online / device offline

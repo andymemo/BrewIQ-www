@@ -19,6 +19,8 @@ The left rail gives you four ways to organize a growing recipe list:
 
 To label or tag a recipe, **right-click** it (in either table or card view) to open the organize menu — click a label to toggle it, or type into "Add tag..." and press Enter. Changes save instantly.
 
+![The recipe organize menu showing label and tag checklists](images/recipe-organize-menu.png){ width="380" }
+
 Filters (folder, year, label, tag) show as removable chips above the list; use **Clear all** to reset.
 
 ### Importing and exporting
