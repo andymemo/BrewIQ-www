@@ -59,7 +59,10 @@ Only visible if your role has notification permissions. Turning on a category he
 - **Fermentation Devices** - device online / device offline
 - **Temp Controllers** - device online / device offline
 - **Data Forwarders** - forwarder disabled (the bell then appears in a forwarder's dialog on the [Devices](devices.md#forwarding-readings-to-other-platforms) page)
-- **Fermentation Alerts** - gravity alerts, temperature alerts, fermentation step reached (bells appear on individual [brew sessions](brew-sessions.md))
+- **Fermentation Alerts** - gravity alerts, temperature alerts, fermentation step reached (bells appear on individual [brew sessions](brew-sessions.md)):
+    - **Gravity alerts** email you as fermentation finishes. You get one email when gravity reaches the recipe's final gravity but is still falling quickly ("FG reached, still fermenting"), and another when it has levelled off ("fermentation appears complete"). They only apply during Primary Fermentation, and they judge the trend over the last few hours of readings, so one odd reading won't trigger them.
+    - **Temperature alerts** email you when the fermenter goes below or above its ideal range. The **Accepted variance (±°C)** setting controls how wide that range is around the target temperature. It starts at ±1°C, accepts 0.1 to 10, and also sets the "ideal range" shown on the session's gauges, so what you see on screen matches when you're emailed. Because it's a personal setting, two people subscribed to the same session can have different ranges.
+    - **Fermentation step reached** emails you when the schedule moves on to its next step.
 
 ## Managing a brewery's team
 

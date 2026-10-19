@@ -21,7 +21,11 @@ Per-user actions from the Users table:
 
 ## Roles
 
-Two tables: built-in **role templates** you can duplicate to start from, and your brewery's **custom roles**, which you create, edit, and delete freely. Editing a role opens a permission checklist - this is what controls what each role can see and do throughout BrewIQ (which Inventory tabs show up, whether they can manage devices, view fermentation data, edit recipes, and so on). Stock, Planning and Accounts each have their own read and write permissions, and Accounts permissions are split into Customers and Excise - so you can, for example, build a role for a bookkeeper that sees only Stock and Accounts. Accounts is only available to Commercial accounts.
+![The Roles tab with built-in templates and custom roles in one table](images/admin-roles.png)
+
+One table lists every role. The **templates** (Brewery Assistant, Customer Admin, Customer Reader and Ferment Assistant) are built into every brewery. They can't be edited, but the **copy** icon on a template makes your own editable copy, named "(Copy)" to start with. **Custom** roles carry a **Custom** tag and have **pencil** (edit) and **trash** (delete) icons. **New role** creates a custom role from scratch.
+
+Editing a role opens a permission checklist - this is what controls what each role can see and do throughout BrewIQ (which Inventory tabs show up, whether they can manage devices, view fermentation data, edit recipes, and so on). Stock, Planning and Accounts each have their own read and write permissions, and Accounts permissions are split into Customers and Excise - so you can, for example, build a role for a bookkeeper that sees only Stock and Accounts. Accounts is only available to Commercial accounts.
 
 ## Trusted IPs
 
