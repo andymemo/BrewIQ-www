@@ -12,7 +12,7 @@ Customers appear in the **Customer** picker when you record a **Sold** movement 
 
 ## Excise
 
-The **Excise** tab works out the excise duty and the Ministry of Health alcohol levy owing on the beer that left your stock — anything recorded as **Sold**, **Given away** or **Consumed** — for a reporting period.
+The **Excise** tab works out the excise duty and the Ministry of Health alcohol levy owing on the beer that left your stock - anything recorded as **Sold**, **Given away** or **Consumed** - for a reporting period.
 
 !!! note "Check the figures"
     The report uses published New Zealand excise bands and the rates in force on the date of each movement. It's a tool to help you prepare, not a substitute for checking your return against the New Zealand Customs Service's own guidance.
@@ -31,7 +31,7 @@ Then choose how to group it:
 
 ![The Excise tab grouped by product, showing each batch's package types with excise and levy](images/accounts-excise-product.png)
 
-**By ABV & Volume** groups the litres into the duty bands used for filing — such as ">1.15% – 2.5%" and ">6% – 9%" — with volume, litres of alcohol, excise and levy for each band. Below it, the **Audit Trail** lists every individual movement that contributed to the totals, by date or by product (batch).
+**By ABV & Volume** groups the litres into the duty bands used for filing - such as ">1.15% – 2.5%" and ">6% – 9%" - with volume, litres of alcohol, excise and levy for each band. Below it, the **Audit Trail** lists every individual movement that contributed to the totals, by date or by product (batch).
 
 ![The Excise tab grouped by ABV band, with an audit trail of each contributing movement](images/accounts-excise-abv.png)
 

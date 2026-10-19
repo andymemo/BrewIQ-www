@@ -1,6 +1,6 @@
 # Dashboard
 
-The Dashboard is the first screen you land on after signing in. It's a quick-glance summary — not the full list — of what's active right now, with links out to the complete views.
+The Dashboard is the first screen you land on after signing in. It's a quick-glance summary - not the full list - of what's active right now, with links out to the complete views.
 
 ![The BrewIQ dashboard in table view, showing Brew Sessions and My Recipes](images/dashboard-list-view.png)
 
@@ -8,18 +8,18 @@ It's built from two sections. Which ones you see depends on your permissions (a 
 
 ## Brew Sessions
 
-Shows your **active** brew sessions only — anything with status *Planning* or *Packaged* is left off the dashboard (those live on the full [Brew Sessions](brew-sessions.md) page). Each entry shows:
+Shows your **active** brew sessions only - anything with status *Planning* or *Packaged* is left off the dashboard (those live on the full [Brew Sessions](brew-sessions.md) page). Each entry shows:
 
 - Recipe name (links to the session detail page)
 - Batch number
 - Brew date
 - Status badge
 
-If a session has fermentation readings logged, a small line-chart icon appears — click it to pop open a fermentation graph dialog without leaving the dashboard.
+If a session has fermentation readings logged, a small line-chart icon appears - click it to pop open a fermentation graph dialog without leaving the dashboard.
 
 ![The fermentation graph dialog on the dashboard, with gravity, ABV, temperature and attenuation gauges above the chart](images/dashboard-fermentation-graph.png)
 
-The dialog opens with four gauges — **Specific Gravity**, **ABV (calculated)**, **Fermenter Temp** and **Attenuation** — each showing its target, and the full fermentation chart below. Switch **Show targets** on or off to overlay your session's target values, and the header tells you which fermentation day you're on and how long remains.
+The dialog opens with four gauges - **Specific Gravity**, **ABV (calculated)**, **Fermenter Temp** and **Attenuation** - each showing its target, and the full fermentation chart below. Switch **Show targets** on or off to overlay your session's target values, and the header tells you which fermentation day you're on and how long remains.
 
 Use the toggle in the top-right to switch between **table** and **card** view. "View all" takes you to the full, filterable Brew Sessions list.
 
@@ -29,11 +29,11 @@ If you have no brew sessions yet, the dashboard tells you to start one from a re
 
 Shows your 4 most recent recipes, as either a table or cards (same view toggle). Each one shows its key stats at a glance:
 
-- **OG** / **FG** — original and final gravity
+- **OG** / **FG** - original and final gravity
 - **ABV**
 - **IBU**
 - **SRM**
-- **VOL** — batch size, in your preferred units (metric/imperial, set in [Account & Preferences](account-preferences.md))
+- **VOL** - batch size, in your preferred units (metric/imperial, set in [Account & Preferences](account-preferences.md))
 
 Clicking a recipe name opens a read-only preview dialog (the same print/preview view used elsewhere in the app), with an **Edit** button to jump into the recipe builder. "View all" goes to the full Recipes page.
 
