@@ -32,7 +32,56 @@ Every session moves through a fixed sequence: **Planning → Brewing → Primary
 
 - **Move to Conditioning** - available once you're brewing
 - **Mark Packaged** - available once in Conditioning; this also turns off any fermentation-alert email notifications for that session
-- **Revert** - undo the last status change (from Packaged back to Conditioning, or from Conditioning back to wherever your logs/readings support)
+- **Revert** - undo the last status change. From Packaged it goes back to Conditioning. From Conditioning it goes back to the latest stage your logs and readings support (Secondary, Primary or Brewing), because moving forward never deletes that data.
+
+The diagram below shows how a session moves between statuses. Orange arrows are steps you take, grey arrows happen on their own, and dotted lines are Revert or data coming from linked devices. Click a box to jump to its section.
+
+```mermaid
+%%{init: {"flowchart": {"curve": "linear"}}}%%
+flowchart TD
+  NEW(["New brew session"])
+  PL["Planning"]
+  BR["Brewing"]
+  PF["Primary Fermentation"]
+  SF["Secondary Fermentation"]
+  CO["Conditioning"]
+  PK["Packaged, session locked"]
+  DEV["Gravity devices"]
+  TC["Temp controllers"]
+  RV["Brewing, Primary or Secondary, whichever your data supports"]
+
+  NEW -- "future brew date" --> PL
+  NEW -- "brew date today or past" --> BR
+  PL -- "brew date arrives" --> BR
+  BR -- "first Fermenter log or reading" --> PF
+  PF -- "Secondary vessel reading" --> SF
+  SF -- "Move to Conditioning, from any brewing stage" --> CO
+  CO -- "Mark Packaged" --> PK
+  PK -. "Revert" .-> CO
+  CO -. "Revert" .-> RV
+  DEV -. "readings, once linked to the session" .-> PF
+  TC <-. "temperature in, step targets out" .-> PF
+
+  classDef step fill:#c8620e26,stroke:#c8620e,stroke-width:1.5px
+  classDef outcome fill:#c8620e26,stroke:#9b1900,stroke-width:3px
+  classDef external fill:#c8620e0d,stroke:#c8620e,stroke-width:1.5px,stroke-dasharray:4 3
+  class NEW,PL,BR,PF,SF,CO step
+  class PK outcome
+  class RV,DEV,TC external
+  linkStyle 5,6 stroke:#c8620e,stroke-width:2.5px
+
+  click PL href "#session-status" "Session status" _self
+  click BR href "#logs-tab-brew-day-logs" "Brew day logs" _self
+  click PF href "#fermentation-tab" "Fermentation tab" _self
+  click SF href "#fermentation-tab" "Fermentation tab" _self
+  click CO href "#session-status" "Session status" _self
+  click PK href "#packaging-tab" "Packaging tab" _self
+  click RV href "#session-status" "Session status" _self
+  click DEV href "../devices/#linking-a-device-to-a-brew-session" "Linking a device to a brew session" _self
+  click TC href "../devices/#temp-control-tab" "Temp Control" _self
+
+```
+
 
 ## Overview tab
 
