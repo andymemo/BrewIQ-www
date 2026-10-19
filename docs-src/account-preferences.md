@@ -58,7 +58,7 @@ Only visible if your role has notification permissions. Turning on a category he
 
 - **Fermentation Devices** - device online / device offline
 - **Temp Controllers** - device online / device offline
-- **Data Forwarders** - forwarder disabled, forwarder recovered (the bell then appears in a forwarder's dialog on the [Devices](devices.md#forwarding-readings-to-other-platforms) page)
+- **Data Forwarders** - forwarder disabled (the bell then appears in a forwarder's dialog on the [Devices](devices.md#forwarding-readings-to-other-platforms) page)
 - **Fermentation Alerts** - gravity alerts, temperature alerts, fermentation step reached (bells appear on individual [brew sessions](brew-sessions.md))
 
 ## Managing a brewery's team
