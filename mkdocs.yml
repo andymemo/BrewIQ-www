@@ -44,7 +44,10 @@ nav:
   - Recipes: recipes.md
   - Brew Sessions: brew-sessions.md
   - Inventory: inventory.md
+  - Stock: stock.md
+  - Planning: planning.md
   - Devices: devices.md
+  - Accounts: accounts.md
   - Account & Preferences: account-preferences.md
   - Tenant Administration: tenant-administration.md
   - FAQ: faq.md

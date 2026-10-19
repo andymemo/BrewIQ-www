@@ -17,6 +17,10 @@ Shows your **active** brew sessions only — anything with status *Planning* or 
 
 If a session has fermentation readings logged, a small line-chart icon appears — click it to pop open a fermentation graph dialog without leaving the dashboard.
 
+![The fermentation graph dialog on the dashboard, with gravity, ABV, temperature and attenuation gauges above the chart](images/dashboard-fermentation-graph.png)
+
+The dialog opens with four gauges — **Specific Gravity**, **ABV (calculated)**, **Fermenter Temp** and **Attenuation** — each showing its target, and the full fermentation chart below. Switch **Show targets** on or off to overlay your session's target values, and the header tells you which fermentation day you're on and how long remains.
+
 Use the toggle in the top-right to switch between **table** and **card** view. "View all" takes you to the full, filterable Brew Sessions list.
 
 If you have no brew sessions yet, the dashboard tells you to start one from a recipe's **"Brew it!"** action (see [Recipes](recipes.md)).
