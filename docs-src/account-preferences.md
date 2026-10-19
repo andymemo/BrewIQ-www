@@ -26,11 +26,21 @@ Defaults that pre-fill into new recipes and calculations, in your chosen units:
 ## Account Details
 
 - **Theme** — Light or Dark
+- **Show button labels** — on by default, so action buttons show a text label beside their icon. Turn it off for a more compact, icon-only layout.
+- **Mobile bottom menu** — see below
 - **Profile Picture** — upload a square PNG or JPEG (up to 500KB)
 - **Display Name**
 - **Email** — changing this requires your current password, and doesn't take effect until you click the confirmation link BrewIQ sends to the new address
 - **Change Password** — current password plus a new one, entered twice
 - **Multi-factor authentication** — enable, reregister (for a new device), or disable MFA; see [Getting Started](getting-started.md) for the full setup walkthrough
+
+### Mobile bottom menu
+
+On a phone or tablet, BrewIQ shows a row of shortcuts along the bottom of the screen. Choose which ones from **Account Details**:
+
+![The Mobile bottom menu section listing pinned items with up, down and unpin buttons](images/preferences-mobile-menu.png){ width="520" }
+
+Pick **up to 6** items to pin, and reorder them with the **up/down arrows**. Use the pin icon to unpin an item or pin one from the **In the side menu** list below. Everything not pinned lives in the menu that opens when you tap your profile picture. Items you don't have permission to use never appear. If you've never customised it, you get a sensible default layout.
 
 ## Notifications
 

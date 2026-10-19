@@ -52,13 +52,23 @@ Treat **Mash pH** and **Cost** as directional estimates rather than lab-precisio
 These are tabs (or view them all stacked at once under the **All** tab):
 
 - **Grain Bill** — click **Add grain** to pull from your [Inventory](inventory.md) (there are separate Grains and Fermentables catalogs, both searchable/tag-filterable from the same dialog). Set the amount per grain; percentage of the grist, colour, and PPG are calculated or pulled in automatically. A running **Total grain bill** shows at the bottom.
-- **Hop Schedule** — click **Add hop**, then set **Usage** (Boil / First Wort / Whirlpool / Mash / Dry Hop), **Form** (Pellet / Leaf / Fresh), **Time**, and **Amount** per addition. Picking Boil or First Wort auto-fills the time to your boil length. A summary at the bottom breaks total hops down by stage (Mash / Boil / Whirlpool / Fermenter) with a density figure so you can sanity-check dry-hop rates.
+- **Hop Schedule** — click **Add hop**, then set **Usage** (Boil / First Wort / Whirlpool / Mash / Dry Hop), **Form** (Pellet / Leaf / Fresh), **Time**, and **Amount** per addition. Picking Boil or First Wort auto-fills the time to your boil length. The **Alpha %** is editable, so you can correct it to match the actual hops you bought (correcting it also updates the recipe's open snapshotted [brew sessions](brew-sessions.md#recipe-view-tab)). A summary at the bottom breaks total hops down by stage (Mash / Boil / Whirlpool / Fermenter) with a density figure so you can sanity-check dry-hop rates.
 - **Adjuncts** — same add/search flow as grains and hops, with a Usage field (Mash, Sparge, Water correction, Boil, Whirlpool, Fermenter, Other).
-- **Yeast & Fermentation** — pick a **Strain** from inventory and BrewIQ fills in supplier, flocculation, temperature range, expected attenuation, and fermentation temp from the strain's data (all still editable). Set **Quantity** and whether a **Starter** was used. Expected attenuation is what drives your FG estimate.
+- **Yeast & Fermentation** — pick a **Strain** from inventory and BrewIQ fills in supplier, flocculation, temperature range, expected attenuation, and fermentation temp from the strain's data (all still editable). Set **Quantity** and whether a **Starter** was used. Expected attenuation is what drives your FG estimate. Below that, the **fermentation steps** table is where you set the batch's schedule — see [Fermentation profile templates](#fermentation-profile-templates).
 - **Mash & Water** — set your **Mash Thickness** and BrewIQ suggests a **Recommended Mash In** volume (and a **Recommended Sparge** volume, accounting for grain absorption); click **Add to schedule** on either to drop a pre-filled step into the **Mash Steps** table below, which you can then edit freely or build entirely by hand with **Add step**.
 - **Notes** — a plain text field for anything else (process notes, tasting notes, etc.).
 
 Any ingredient you add here comes straight from your ingredient catalog — if something's missing, add it in [Inventory](inventory.md) first.
+
+### Fermentation profile templates
+
+Most of your beers probably share the same fermentation shape — ferment, diacetyl rest, cold crash, condition — with only durations and temperatures changing. Rather than re-typing the steps, use a **fermentation profile**.
+
+- Click **Add from template** above the fermentation steps (on a recipe, or on a [brew session](brew-sessions.md#fermentation-tab)) and pick a profile. If steps already exist you choose **Replace** or **Add to end**.
+- Click **Save as template** to turn the steps you've built into a reusable profile.
+- Manage them all from the **Fermentation Profiles** tab on the Recipes page, where you can add, edit, clone and delete profiles. Every brewery starts with an editable **Standard** profile (7 days at 18°C, a 2-day rest at 21°C, a 2-day cold crash at 2°C, then 14 days conditioning at 2°C).
+
+Applying a template copies its steps — it doesn't stay linked, so editing or deleting a template later never changes recipes or sessions that already used it. A step can be marked as a **Conditioning** step; its duration is used for [Planning](planning.md) (how long a vessel is occupied), but it never drives a temperature controller before the session actually reaches Conditioning.
 
 ### Saving
 

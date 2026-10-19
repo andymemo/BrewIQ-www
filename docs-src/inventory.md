@@ -1,6 +1,6 @@
 # Inventory
 
-Inventory is your **ingredient catalogue** — the specs and pricing for grains, hops, yeast, and adjuncts that you pull into recipes. It is **not** a stock-tracking system: there's no "quantity on hand" field, and using an ingredient in a recipe or brew session doesn't deplete anything here. Think of it as your reference library of ingredients, not a pantry counter.
+Inventory is your **ingredient catalogue** — the specs and pricing for grains, hops, yeast, and adjuncts that you pull into recipes. It describes *what* an ingredient is and what it costs; it doesn't count how much you have. To track quantities on hand, lots, and which batches used them, use [Stock](stock.md).
 
 The page has tabs for **Grains**, **Hops**, **Fermentables**, **Adjuncts**, and **Yeasts**, plus a **Misc** tab if you have packaging-cost permissions (covered at the bottom — it's unrelated to recipe ingredients).
 
@@ -22,9 +22,23 @@ Click **Add custom grain / hop / fermentable / adjunct / yeast** at the top of t
 
 ![The Add custom grain dialog showing similar catalogue matches with Clone & customize buttons](images/inventory-add-custom.png){ width="420" }
 
-Custom items you own get full **Edit**/**Delete** icons. Shared catalogue items you don't own only offer a **Clone** icon — cloning makes an editable tenant-owned copy immediately, no confirmation step.
+Custom items you own get full **Edit**/**Delete** icons. Shared catalogue items you don't own only offer a **Clone** icon — cloning makes an editable tenant-owned copy immediately, no confirmation step. Every row also has a **price tag** icon for [setting your own price](#setting-your-own-price).
 
 Click any ingredient's name to open a read-only details view without editing it.
+
+## Setting your own price
+
+Shared catalogue items come with a platform default price (often blank). To put your brewery's real price on one **without cloning it**, click the **price tag** icon at the end of its row.
+
+![The Set price dialog with price and unit fields and a price history section](images/inventory-set-price.png){ width="480" }
+
+Enter a **Price** and **Unit** and click **Save price**. From then on:
+
+- New recipe additions and cost estimates use your price straight away.
+- **Existing recipes keep the price they already had** until you use **Refresh from inventory** on them, so a price change never silently alters a recipe's cost.
+- The dialog keeps a **price history** of changes, and a price you set on the item itself (for a custom item) shows up there too.
+
+You can also set a price when you receive stock: tick **Update this item's inventory price** in [Receive Stock](stock.md#receiving-stock) to save the price you paid as your brewery's price.
 
 ## Deleting
 
