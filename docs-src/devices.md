@@ -78,6 +78,14 @@ Icon buttons per card let you: toggle email alerts (bell), view the raw reading 
 
 Use the **Linked Brew Session** dropdown on the device card to attach it to an active session (anything not yet packaged). Once linked, every gravity reading that comes in is logged against that session and can automatically kick off fermentation tracking on it - see [Brew Sessions](brew-sessions.md).
 
+### How long readings are kept
+
+BrewIQ keeps detailed device readings for a limited time, so link a device to its brew session before fermentation begins.
+
+- The **raw reading history** on a device card is kept for **30 days** if the device was linked to a brew session when the reading arrived, and for **48 hours** if it wasn't. Temperature controllers follow the same rule.
+- A linked device's readings are also saved on the session's own fermentation readings, which feed its chart and gauges. Those are kept long term, but older ones are thinned out automatically: after 60 days they're averaged into hourly points, after 180 days into 3-hourly points, after a year into 12-hourly points, and after 18 months they're removed. Readings you enter by hand are never thinned or removed.
+- Once a session has been running for more than 30 days, new device readings are recorded about once an hour instead of every few minutes.
+
 ### Forwarding readings to other platforms
 
 Many brewers log a gravity device to a second service such as BrewersFriend or Grainfather as well. Rather than pointing the device at one destination only, BrewIQ can pass each device's readings on for you. Click the **paper plane** icon on a device card to set it up.

@@ -132,7 +132,9 @@ This is where day-to-day tracking happens, combining manual entries with any lin
 
 ![The Fermentation Tracking gauges, status stepper, and Fermentation Steps schedule](images/fermentation-tracking.png)
 
-**Fermentation Tracking** header - shows four gauges: **Specific Gravity** (with target FG), **ABV (calculated)**, **Fermenter Temp** (flags whether you're in, below, or above the ideal range), and **Attenuation**. If you've linked a gravity-tracking device or temp controller, its data feeds these gauges automatically - whichever source (manual or device) is more recent wins.
+**Fermentation Tracking** header - shows four gauges: **Specific Gravity** (with target FG), **ABV (calculated)**, **Fermenter Temp** (flags whether you're in, below, or above the ideal range - see below), and **Attenuation**. If you've linked a gravity-tracking device or temp controller, its data feeds these gauges automatically - whichever source (manual or device) is more recent wins.
+
+The **target** temperature is the active step's temperature. With no schedule it falls back to the recipe's fermentation temperature, then to the midpoint of the yeast's temperature range. The **ideal range** is that target plus or minus the **Accepted variance** in your [notification preferences](account-preferences.md#notifications), and the same value decides when a temperature alert is emailed to you.
 
 **Add Reading** - log Date & Time, Gravity, Temp, pH, and Vessel (Primary/Secondary) by hand at any point.
 
@@ -146,9 +148,11 @@ Everything on this tab locks once the session is Packaged, but stays visible.
 
 ### Fermentation Steps - the schedule
 
-This is a step-by-step temperature schedule you build for the batch: name, duration, start temp, and (optionally) a ramp to a finish temp, with an optional Temp Controller mode (Off / Heating & Cooling / Heating Only / Cooling Only) per step.
+This is a step-by-step temperature schedule you build for the batch: name, duration, start temp, and (optionally) a ramp to a finish temp (moved in 0.5°C increments), with an optional Temp Controller mode (Off / Heating & Cooling / Heating Only / Cooling Only) per step.
 
 Turn on **Managed Mode** and BrewIQ pushes each step's target temperature (and heating/cooling mode) to a paired temp controller automatically as the schedule advances - no manual adjustment needed on the controller itself.
+
+Each step shows a small icon for how it was reached: a **clock** for a step that ran its planned time, a **robot** for one that advanced automatically on a gravity condition, and a **hand** for one you skipped or rewound to. Hover over it for the time.
 
 Each step can also **auto-advance**: set a condition based on average attenuation velocity dropping below a threshold, average gravity dropping below a threshold, or both, evaluated over a configurable time window, and BrewIQ moves to the next step on its own once the condition is met. You can also **Skip** the active step forward manually, or **Rewind** back to the previous one.
 
