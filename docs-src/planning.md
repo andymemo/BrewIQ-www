@@ -12,10 +12,10 @@ Before you can schedule anything, add your vessels on the **Equipment** tab.
 
 Click **Add Equipment** and fill in:
 
-- **Name** and a **Kind** — Fermenter, Bright Tank, Brewhouse Vessel or Keg
+- **Name** and a **Kind** - Fermenter, Bright Tank, Brewhouse Vessel or Keg
 - **Volume** (litres)
-- **Expected Loss** (litres) — what you typically lose to trub when transferring out
-- **Turnaround (days)** — how long cleaning and changeover takes after a batch
+- **Expected Loss** (litres) - what you typically lose to trub when transferring out
+- **Turnaround (days)** - how long cleaning and changeover takes after a batch
 - A **colour**, used for its bars on the schedule
 
 Each vessel shows as **Active** or **Retired**. Use the pencil to edit one. A vessel that's been used can't simply be deleted, so mark it **Retired** to take it out of the pickers while keeping its history.
@@ -26,8 +26,8 @@ Each vessel shows as **Active** or **Retired**. Use the pencil to edit one. A ve
 
 The **Schedule** tab has two views, chosen from the dropdown at the top-left. BrewIQ remembers your choice on that browser.
 
-- **Timeline** — one row per vessel, one column per day, with each batch drawn as a bar showing how long it occupies the vessel. Switch between **Daily** and **Weekly** scale to zoom out. Today is highlighted.
-- **Month** — a calendar, with each day listing the batches occupying vessels.
+- **Timeline** - one row per vessel, one column per day, with each batch drawn as a bar showing how long it occupies the vessel. Switch between **Daily** and **Weekly** scale to zoom out. Today is highlighted.
+- **Month** - a calendar, with each day listing the batches occupying vessels.
 
 ![The Planning month view with batches listed on each day and blocked days shaded](images/planning-month.png)
 
@@ -41,7 +41,7 @@ If a vessel is already booked, BrewIQ won't let you double-book it.
 
 ### Assigning equipment
 
-Click **Assign Equipment** (top-right) to book a vessel for a brew session, or assign equipment at the moment you create a session — see [Starting a session](brew-sessions.md#starting-a-session).
+Click **Assign Equipment** (top-right) to book a vessel for a brew session, or assign equipment at the moment you create a session - see [Starting a session](brew-sessions.md#starting-a-session).
 
 A beer that conditions in its fermenter takes a single booking. If it's transferred to a separate vessel for conditioning (for example a bright tank), it gets a second booking after the first.
 
@@ -70,6 +70,6 @@ ABV and cost are estimates calculated from each recipe, and the ready date adds 
 
 ![The Blocked days tab listing public holidays and other days you'd rather not brew on](images/planning-blocked-days.png)
 
-Mark the days you'd rather not brew on — public holidays, maintenance, trade shows — on the **Blocked days** tab. Click **Add Blocked Days**, give it a **label**, a date or date range, and tick **Repeats yearly** for fixed-date holidays such as Christmas.
+Mark the days you'd rather not brew on - public holidays, maintenance, trade shows - on the **Blocked days** tab. Click **Add Blocked Days**, give it a **label**, a date or date range, and tick **Repeats yearly** for fixed-date holidays such as Christmas.
 
 Blocked days are shaded on the schedule. They're a warning, not a rule: picking a blocked day as a brew day shows a warning, and dragging a brew onto one asks you to confirm, but you can always go ahead. They apply to the whole brewery rather than to one vessel. Holidays that move each year (like Easter) need a new entry each year.
