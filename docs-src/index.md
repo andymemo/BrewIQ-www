@@ -12,7 +12,7 @@ This is the end-user reference for BrewIQ. Use the navigation to jump to a topic
 - **[Inventory](inventory.md)** - your grain, hop, yeast, and adjunct catalogue, with your own prices
 - **[Stock](stock.md)** - packaged beer and raw ingredient lots on hand, with a full audit trail
 - **[Planning](planning.md)** - equipment, the brewing schedule, and blocked days
-- **[Devices](devices.md)** - connecting Tilt/iSpindel/RAPT Pill gravity sensors and Grainfather temp control
+- **[Devices](devices.md)** - connecting Tilt/iSpindel/RAPT Pill gravity sensors and Grainfather or RAPT temperature controllers
 - **[Accounts](accounts.md)** - customers and excise duty reporting for commercial breweries
 - **[Account & Preferences](account-preferences.md)** - units, defaults, and your profile
 - **[Tenant Administration](tenant-administration.md)** - managing your brewery's users, roles, and settings

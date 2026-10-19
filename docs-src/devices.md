@@ -5,7 +5,7 @@ The **Devices** page has three tabs: **Fermentation**, **Temp Control**, and **I
 Two important framing points before you connect anything:
 
 - BrewIQ does **not** talk Bluetooth or discover hardware on your local network. Fermentation sensors (Tilt, iSpindel, RAPT Pill) connect by having your own bridge/app POST readings to a BrewIQ URL - you configure the device's *own* app to point at BrewIQ, not the other way around.
-- Grainfather is the only temperature-controller integration. There's no generic/vendor-neutral controller support (e.g. Inkbird).
+- Two temperature-controller brands are supported: **Grainfather** (the Glycol Chiller Adapter) and the **RAPT WiFi Temperature Controller**. There's no generic or vendor-neutral controller support (for example Inkbird).
 
 ## Integration tab - set this up first
 
@@ -43,7 +43,20 @@ To use Grainfather temperature control, connect your Grainfather account first:
 
 This connects your *account*, not an individual device - you still need to register each device (below).
 
-There are also two collapsible **debug panels** on this tab - a **Live Ingestion Log** and a **MQTT Connection Log** - useful when you're setting up hardware for the first time and want to confirm readings are actually arriving. They only show the most recent activity; they aren't a permanent history.
+### RAPT Account
+
+To use a RAPT temperature controller, connect your RAPT account first:
+
+1. In the RAPT app, go to **My Account → API Secrets** and create an API Secret. RAPT shows it only once, so copy it straight away.
+2. In BrewIQ, enter your **RAPT account username** (usually your email address) and paste the **API Secret**.
+3. Click **Save**.
+4. Once connected, the panel shows a **Connected** or **Disconnected** badge, with buttons to **Connect**/**Disconnect** the link or **Remove Account** entirely.
+
+As with Grainfather, this connects your *account*, not an individual controller. You then import the controllers you want from the **Temp Control** tab (below). If the account won't connect, check that both the username and the API Secret are filled in.
+
+### Debug panels
+
+There are collapsible **debug panels** on this tab - a **Live Ingestion Log** for gravity devices (incoming readings and outgoing forwarded posts), a **MQTT Connection Log** for Grainfather, and a log of **RAPT API calls**. They're useful when you're setting up hardware for the first time and want to confirm readings are actually arriving. They only show the most recent activity; they aren't a permanent history.
 
 ## Fermentation tab
 
@@ -59,25 +72,69 @@ Every gravity/temperature sensor (Tilt, iSpindel, RAPT Pill) shows up here as a 
 - First seen / last seen timestamps
 - A **Linked Brew Session** selector
 
-Icon buttons per card let you: toggle email alerts (bell), view the raw reading history (list), view a fermentation graph if it's linked to a session with readings (line chart), rename the device (pencil), or delete it (trash). Deleting keeps the reading history by default - there's a separate "also permanently delete history" option if you want it fully gone.
+Icon buttons per card let you: toggle email alerts (bell), view the raw reading history (list), view a fermentation graph if it's linked to a session with readings (line chart), [forward its readings to other platforms](#forwarding-readings-to-other-platforms) (paper plane), rename the device (pencil), or delete it (trash). Deleting keeps the reading history by default - there's a separate "also permanently delete history" option if you want it fully gone.
 
 ### Linking a device to a brew session
 
 Use the **Linked Brew Session** dropdown on the device card to attach it to an active session (anything not yet packaged). Once linked, every gravity reading that comes in is logged against that session and can automatically kick off fermentation tracking on it - see [Brew Sessions](brew-sessions.md).
 
-## Temp Control tab (Grainfather)
+### Forwarding readings to other platforms
+
+Many brewers log a gravity device to a second service such as BrewersFriend or Grainfather as well. Rather than pointing the device at one destination only, BrewIQ can pass each device's readings on for you. Click the **paper plane** icon on a device card to set it up.
+
+![A Tilt device card with the forward icon highlighted](images/devices-forward-icon.png){ width="320" }
+
+![The Forward dialog with three empty Configure forwarder slots](images/devices-forwarders-empty.png){ width="520" }
+
+Each device can have up to **3 forwarders**. Click **+ Configure forwarder** and fill in:
+
+- **Platform** - **BrewersFriend**, **Grainfather**, or **Other** for any service that accepts a web request.
+
+    ![The Platform dropdown showing BrewersFriend, Grainfather and Other](images/devices-forwarders-platform.png){ width="520" }
+
+- **Post Interval** - how often a reading is sent: every 15, 30, 45 or 60 minutes (15 by default). Some platforms enforce their own minimum and reject posts that arrive faster, so increase the interval if that happens.
+- The destination details for the platform you chose:
+    - **BrewersFriend** - your **API Key**, found under Account > Integrations on brewersfriend.com. BrewIQ picks the right destination address from the device's type.
+    - **Grainfather** - your Grainfather **Integration ID**.
+    - **Other** - the **URL** to post to, plus any **Headers** (such as an authorisation key) the service needs.
+
+Keys, IDs and header values are stored encrypted and shown masked afterwards. Open a forwarder's edit icon to see them again.
+
+![Two configured forwarders, one paused and one active, each with test, notification, edit and delete icons](images/devices-forwarders-list.png){ width="520" }
+
+Each forwarder shows its platform, a masked address, its interval and an **Active** switch. Its icons let you:
+
+- **Send a test post** (lightning bolt) using the device's latest reading, to check the connection works
+- **Subscribe to notifications** (bell) - available once you turn on the Data Forwarders alerts in [Account & Preferences](account-preferences.md)
+- **Edit** (pencil) or **delete** (trash) it
+
+A few things to know:
+
+- **Local logging never stops.** Forwarding is an extra copy. Your readings are always recorded in BrewIQ whatever happens to a forwarder.
+- **It sends the latest reading on each interval**, not every individual reading, so a device that reports every few minutes is forwarded at the interval you chose.
+- **A failing forwarder switches itself off.** After 3 failed attempts in a row it's disabled automatically and shows a red **Disabled** badge. A forwarder you switch off yourself shows **Paused**. Turn the **Active** switch back on once you've fixed the problem (for example a wrong key).
+- **Forwarded posts appear in the Live Ingestion Log** on the Integration tab alongside incoming readings, so you can see what was sent and whether the platform accepted it.
+- **Only gravity devices can be forwarded.** Tilt, iSpindel and RAPT Pill are covered. Temperature controllers are not.
+
+## Temp Control tab
+
+Both brands of temperature controller appear together here, one card each. A brew session can be linked to only **one** controller at a time (Grainfather *or* RAPT), so to switch a session to a different controller, unlink the first one.
 
 ### Adding a device
 
-Click **Add Device** and fill in:
+Click **Add Device** and choose the brand.
+
+**Grainfather** - fill in:
 
 - **Serial (esp_chip_id)** - copy this exactly from the Grainfather app
 - **Friendly name** - whatever you want to call it (e.g. "GCA1")
 - **Type** - **Temp Controller** (a Glycol Chiller Adapter) or **Brew Unit** (a G70). Note: Brew Unit devices are tracked for identification only - BrewIQ doesn't send them commands.
 
-There's no auto-discovery here - you have to register the serial manually.
+There's no auto-discovery for Grainfather - you have to register the serial manually.
 
-### Monitoring and control
+**RAPT** - connect your RAPT account first (see the Integration tab above), then choose **RAPT**. BrewIQ lists the controllers on your RAPT account that haven't been added yet. Tick the ones you want and import them. A controller you removed earlier reappears in this list so you can add it back.
+
+### Grainfather: monitoring and control
 
 ![Two Temp Control device cards, one online and cooling, one offline in manual mode](images/devices-temp-control.png)
 
@@ -95,9 +152,21 @@ If a Grainfather-app brew session is actively controlling the device, BrewIQ sho
 
 ![The Grainfather device detail view showing current temperature, device settings and a temperature history chart](images/devices-temp-control-detail.png)
 
-### Fermentation schedule
+### Grainfather: fermentation schedule
 
-This is a BrewIQ-side schedule, not something synced to the device's own onboard programming. You add steps (label, target temp, duration, optional note), and advance through them yourself with a **Skip to {step}** button - clicking it pushes that step's target temperature to the device immediately. It's a manual aid for following a plan, not an automated timer.
+This device-level schedule is a BrewIQ-side schedule, not something synced to the device's own onboard programming. You add steps (label, target temp, duration, optional note), and advance through them yourself with a **Skip to {step}** button - clicking it pushes that step's target temperature to the device immediately. It's a manual aid for following a plan, not an automated timer.
+
+If you'd rather have BrewIQ run the schedule for you, build it on the brew session instead and turn on **Managed Mode** - see [Fermentation Steps](brew-sessions.md#fermentation-steps-the-schedule). That works with either brand of controller.
+
+### RAPT controllers
+
+A RAPT controller card shows an **ONLINE** or **OFFLINE** badge and when it was last seen. Click it to open a view that mirrors the controller's own screen: the current temperature, and the **Target Temp** with +/- buttons and a **Set Target Temperature** dialog. From the detail view you can also rename the controller, pick a **Gravity source**, set a **Linked Brew Session**, and see a **Temperature & gravity history** chart (logged roughly every 5 minutes).
+
+RAPT works differently from Grainfather in a few ways:
+
+- **Settings are read-only.** The **Device settings** panel shows whether heating and cooling are **Enabled** or **Disabled**, but these are configured on the physical unit and can't be changed from BrewIQ. BrewIQ can only set the target temperature.
+- **Steps are limited to Heating & Cooling or Off.** RAPT can't be told to heat only, cool only or pause from outside. A brew session linked to a RAPT controller can only use those two modes in its fermentation steps. If any step (or the conditioning temperature) is set to heating-only or cooling-only, BrewIQ refuses the link until you change it.
+- **It checks in about once an hour.** RAPT controllers sleep between check-ins, so BrewIQ counts one as online if it has been seen within the last 90 minutes. BrewIQ refreshes RAPT data about every 5 minutes, so what you see can lag slightly behind the controller.
 
 ## Notifications
 
