@@ -38,19 +38,23 @@ extra_css:
   - assets/extra.css
 
 nav:
-  - Home: index.md
-  - Getting Started: getting-started.md
-  - Batch Lifecycle: lifecycle.md
-  - Dashboard: dashboard.md
-  - Recipes: recipes.md
-  - Brew Sessions: brew-sessions.md
-  - Inventory: inventory.md
-  - Stock: stock.md
-  - Planning: planning.md
-  - Devices: devices.md
+  - Start:
+    - Home: index.md
+    - Getting Started: getting-started.md
+    - Batch Lifecycle: lifecycle.md
+  - Brewing:
+    - Dashboard: dashboard.md
+    - Recipes: recipes.md
+    - Brew Sessions: brew-sessions.md
+    - Planning: planning.md
+    - Devices: devices.md
+  - Stock & Inventory:
+    - Inventory: inventory.md
+    - Stock: stock.md
   - Accounts: accounts.md
-  - Account & Preferences: account-preferences.md
-  - Tenant Administration: tenant-administration.md
+  - Settings & Admin:
+    - Account & Preferences: account-preferences.md
+    - Tenant Administration: tenant-administration.md
   - FAQ: faq.md
 
 markdown_extensions:
