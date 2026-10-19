@@ -40,6 +40,7 @@ extra_css:
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
+  - Batch Lifecycle: lifecycle.md
   - Dashboard: dashboard.md
   - Recipes: recipes.md
   - Brew Sessions: brew-sessions.md
