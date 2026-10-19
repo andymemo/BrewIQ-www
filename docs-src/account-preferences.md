@@ -36,7 +36,15 @@ Defaults that pre-fill into new recipes and calculations, in your chosen units:
 
 ### Mobile bottom menu
 
-On a phone or tablet, BrewIQ shows a row of shortcuts along the bottom of the screen. Choose which ones from **Account Details**:
+On a phone or tablet, BrewIQ shows a row of shortcuts along the bottom of the screen - for example Dashboard, Recipes, Sessions, Devices and Inventory.
+
+![A phone showing the BrewIQ dashboard with the bottom menu bar of Dashboard, Recipes, Sessions, Devices and Inventory](images/mobile-dashboard.png){ width="300" }
+
+Everything that isn't on the bar lives in the **side menu**, which opens when you tap your profile picture in the top-right corner.
+
+![The side menu opened on a phone, listing Stock, Planning, Accounts, Preferences and Admin](images/mobile-side-menu.png){ width="300" }
+
+You choose which items sit on the bottom bar from **Account Details**:
 
 ![The Mobile bottom menu section listing pinned items with up, down and unpin buttons](images/preferences-mobile-menu.png){ width="520" }
 
