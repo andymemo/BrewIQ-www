@@ -55,3 +55,9 @@ If an admin created your account with a temporary password, or reset your passwo
 ## Changing your email
 
 If you change your email address yourself (from Account & Preferences), the change doesn't take effect immediately - BrewIQ sends a confirmation link to the *new* address, and you keep signing in with your old email until you click it.
+
+## Getting help
+
+Click **Help** in the left menu (just below **Admin**) to open this guide in a new tab. It opens at the page for whatever you're looking at in BrewIQ - from **Recipes** you land on [Recipes](recipes.md), from a brew session on [Brew Sessions](brew-sessions.md). On pages with tabs it goes straight to that tab's section, for example **Devices** with the **Temp Control** tab open takes you to [Temp Control tab](devices.md#temp-control-tab).
+
+On a phone, tap your profile picture at the top right to open the menu - **Help** is listed there.
