@@ -76,9 +76,23 @@ These are tabs (or view them all stacked at once under the **All** tab):
 - **Yeast** - pick a **Strain** from inventory and BrewIQ fills in supplier, flocculation, temperature range, expected attenuation, and fermentation temp from the strain's data (all still editable). Set **Quantity** and whether a **Starter** was used. Expected attenuation is what drives your FG estimate.
 - **Mash & Water** - set your **Mash Thickness** and BrewIQ suggests a **Recommended Mash In** volume (and a **Recommended Sparge** volume, accounting for grain absorption); click **Add to schedule** on either to drop a pre-filled step into the **Mash Steps** table below, which you can then edit freely or build entirely by hand with **Add step**.
 - **Fermentation** - plan the batch's temperature schedule, step by step. See [Fermentation steps](#fermentation-steps).
-- **Notes** - a plain text field for anything else (process notes, tasting notes, etc.).
+- **Notes** - a plain text field for anything else (process notes, tasting notes, etc.), with room for one photo of the beer beside it. See [Recipe photo](#recipe-photo).
 
 Any ingredient you add here comes straight from your ingredient catalog - if something's missing, add it in [Inventory](inventory.md) first.
+
+### Recipe photo
+
+Each recipe can have one photo, shown beside the notes on the **Notes** tab. Save a new recipe first - until then the box reads **Save the recipe to add a photo**.
+
+![The Notes tab with an empty Add photo box beside the notes](images/recipe-builder-notes-add-photo.png)
+
+Click **Add photo** and pick a PNG or JPEG. You can use a full-size photo straight from your phone - anything larger than 1000 x 1000 px or 300 KB is resized automatically before it's uploaded.
+
+![The Notes tab with a photo of the beer beside the notes, and Replace and Remove buttons underneath](images/recipe-builder-notes-photo.png)
+
+Once a photo is added, use **Replace** (circular arrows) to swap it for another, or **Remove** (trash) to delete it. These show as icons only if you've turned off **Show button labels** in [Account & Preferences](account-preferences.md).
+
+The photo also appears beside the notes in the [Print Preview](#print-preview) and on a [shared recipe](#sharing-a-recipe) page, and it's copied when you **Clone** the recipe.
 
 ### Prices, refreshing and matching ingredients
 
