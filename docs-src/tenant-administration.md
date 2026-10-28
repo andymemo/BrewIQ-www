@@ -17,6 +17,7 @@ Per-user actions from the Users table:
 - **Resend activation** for anyone still pending
 - **Reset password** - generates a new temporary password for them (same one-time reveal as account creation)
 - **Reset MFA** - clears their enrollment; they'll be asked to set it up again next sign-in
+- **Revoke devices** - every device they've [trusted](getting-started.md#trusted-devices) will need an MFA code again at its next sign-in - useful if they've lost a phone. Their MFA setup itself is left alone
 - **Delete** (not available for your own account)
 
 ## Roles
@@ -32,6 +33,10 @@ Editing a role opens a permission checklist - this is what controls what each ro
 ![The Trusted IPs tab listing IP/CIDR ranges that skip MFA](images/admin-trusted-ips.png)
 
 Sign-ins from a trusted IP or subnet skip the MFA requirement. Add a CIDR range with a description to exempt it; removing one means sign-ins from that range require MFA again (if your role otherwise requires it).
+
+### Trusted device length
+
+Below the IP ranges, **Trusted device length (days)** sets how long a "Trust this device" tick at sign-in lasts for your team (see [Trusted devices](getting-started.md#trusted-devices)). It's 30 days by default, which is also the most allowed - you can make it shorter, or set it to **0** to turn the option off entirely. A shorter length also applies straight away to devices people have already trusted. Changing it needs the same permission as editing trusted IP ranges.
 
 ## Recipe Labels
 

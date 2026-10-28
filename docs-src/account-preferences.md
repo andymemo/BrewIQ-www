@@ -33,6 +33,7 @@ Defaults that pre-fill into new recipes and calculations, in your chosen units:
 - **Email** - changing this requires your current password, and doesn't take effect until you click the confirmation link BrewIQ sends to the new address
 - **Change Password** - current password plus a new one, entered twice
 - **Multi-factor authentication** - enable, reregister (for a new device), or disable MFA; see [Getting Started](getting-started.md) for the full setup walkthrough
+- **Trusted devices** - the browsers you've chosen to trust at sign-in, so they skip the MFA code; revoke any you no longer use (see [Trusted devices](getting-started.md#trusted-devices))
 
 ### Mobile bottom menu
 

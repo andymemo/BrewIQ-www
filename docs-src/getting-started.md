@@ -21,6 +21,17 @@ Go to the login page and enter your **Email** and **Password**, then **Sign in**
 
 If your account has two-factor authentication enabled, you'll be prompted for a second step after your password: a 6-digit code from your authenticator app, or **Use a backup code instead** if you don't have your app handy.
 
+![The Two-factor verification step with an Authenticator code field and a "Trust this device for 30 days" checkbox](images/mfa-trust-device.png){ width="320" }
+
+On your own phone or computer, tick **Trust this device for 30 days** before you click **Verify**. For the next 30 days, signing in on that browser only needs your password - no code. This is handy on a phone using mobile data, where your network address keeps changing and a [trusted IP range](tenant-administration.md#trusted-ips) can't help. Don't tick it on a shared or public device.
+
+A few things to know:
+
+- Your **password is always still required** - trusting a device only skips the code.
+- The 30 days count from when you ticked the box. Signing in again doesn't extend it - when it runs out, you'll be asked for a code once more and can trust the device again.
+- Trust belongs to that one browser. A different browser on the same phone, a private/incognito window, or clearing your cookies all mean you'll be asked for a code.
+- Your admin may set a shorter length, or turn the option off - if it's off, you won't see the checkbox.
+
 Forgotten your password? Click **Forgot password?** on the login screen - see below.
 
 ## Two-factor authentication (MFA)
@@ -36,6 +47,14 @@ MFA is optional by default, but some roles require it - if yours does, you'll be
 3. You'll be shown a set of **backup codes** - save these somewhere safe. Each one can be used once to sign in if you lose access to your authenticator app, and they're only shown this one time.
 
 You can manage MFA any time from [Account & Preferences](account-preferences.md) - enable it if it's optional, **Reregister MFA** if you're moving to a new device, or **Disable MFA** (both require your password and a current code to confirm).
+
+### Trusted devices
+
+![The Trusted devices list under Multi-factor authentication, showing "Chrome on iPhone" with when it was trusted, when it expires, and a delete icon](images/account-trusted-devices.png){ width="460" }
+
+Every device you've trusted is listed under **Trusted devices** in [Account & Preferences](account-preferences.md), with when you trusted it, when it expires, and when it was last used. The one you're using right now is marked **This device**. Click the bin icon to stop trusting a device (or **Revoke all** if you have more than one) - it'll need a code at its next sign-in.
+
+BrewIQ also clears all your trusted devices automatically when you change or reset your password, or reregister or disable MFA. If you lose a phone you'd trusted, revoke it here (or ask your admin to) and change your password.
 
 ## Forgotten password
 
