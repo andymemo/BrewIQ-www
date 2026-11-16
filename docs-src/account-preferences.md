@@ -31,9 +31,18 @@ Defaults that pre-fill into new recipes and calculations, in your chosen units:
 - **Profile Picture** - upload a square PNG or JPEG (up to 500KB)
 - **Display Name**
 - **Email** - changing this requires your current password, and doesn't take effect until you click the confirmation link BrewIQ sends to the new address
-- **Change Password** - current password plus a new one, entered twice
+- **Change Password** - current password plus a new one, entered twice (see [Password requirements](getting-started.md#password-requirements)). Changing it signs you out of every other session.
 - **Multi-factor authentication** - enable, reregister (for a new device), or disable MFA; see [Getting Started](getting-started.md) for the full setup walkthrough
 - **Trusted devices** - the browsers you've chosen to trust at sign-in, so they skip the MFA code; revoke any you no longer use (see [Trusted devices](getting-started.md#trusted-devices))
+- **Signed-in sessions** - sign out everywhere except the browser you're using (see below)
+
+### Signed-in sessions
+
+![The Signed-in sessions section with a Sign out of all other sessions button](images/account-signed-in-sessions.png){ width="460" }
+
+Signed in on a device you no longer have, or on a computer someone else uses? Click **Sign out of all other sessions**. Every other browser and device signed in to your account is signed out straight away, and you stay signed in where you are.
+
+You don't need to do this after changing your password, or reregistering or disabling MFA - BrewIQ signs your other sessions out automatically then. If you think someone else knows your password, change it.
 
 ### Mobile bottom menu
 
