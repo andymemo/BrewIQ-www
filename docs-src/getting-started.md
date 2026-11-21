@@ -58,14 +58,17 @@ BrewIQ also clears all your trusted devices automatically when you change or res
 
 ## Forgotten password
 
-![The Reset your password screen asking for an account email](images/password-reset.png){ width="320" }
+![The Reset your password screen asking for your email and the 6-digit code from your authenticator app](images/password-reset.png){ width="320" }
 
-Click **Forgot password?** and enter your email. What happens next depends on whether MFA is already set up on your account:
+Click **Forgot password?** on the login screen, enter your **Email** and the 6-digit **Authenticator code** from your app, and click **Send reset link**. BrewIQ emails you a link (valid for 1 hour) - follow it to set a new password.
 
-- **MFA enabled** - enter a code from your authenticator app, and BrewIQ emails you a reset link (valid for 1 hour). Follow it to set a new password.
-- **MFA not enabled** - self-service reset isn't available; you'll need to ask your admin to reset your password for you.
+Self-service reset needs [two-factor authentication](#two-factor-authentication-mfa), so if MFA isn't set up on your account, ask your admin to reset your password for you instead. This is why it's worth setting up MFA early.
 
-This is why it's worth setting up MFA early - it's what makes self-service password recovery possible.
+Resetting your password signs you out everywhere else you're signed in, and clears your [trusted devices](#trusted-devices).
+
+## Password requirements
+
+Whenever you choose a new password - changing it, resetting it, or replacing a temporary one - it must be at least 12 characters. A passphrase of a few words works well. Passwords that have appeared in known data breaches aren't accepted, so pick something you haven't used elsewhere. An existing password keeps working until you next change it.
 
 ## Signed in with a temporary password
 
